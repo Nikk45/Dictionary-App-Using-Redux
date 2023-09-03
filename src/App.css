@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(230, 230, 230);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Navbar Styling */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0.5% 2%;
+  color: white;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+.navbar a{
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1{
+  margin: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.home, .history{
+  cursor: pointer;
+}
+
+.sections{
+  display: flex;
+  gap: 1em;
+  width: 10%;
+  font-size: 18px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+/* Home Page Styling */
+
+.searchbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 0;
+  gap: 8px;
+}
+
+.searchbar input{
+  font-size: 16px;
+  padding: 5px 15px;
+  width: 20%;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.searchbar button{
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 6px 15px;
+  cursor: pointer;
+}
+
+.word-info{
+  background-color: white;
+  margin: 0 2%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+/* History Page Styling */
+
+h2{
+  margin: 0;
+  padding: 1% 0;
+}
+
+.history-page{
+  padding: 0 2%;
+  background-color: white;
+}
+
+.word p{
+  margin: 0;
+}
+
+.history-list{
+  padding-bottom: 10px;
+}
+
+/* error styling */
+
+.error{
+  margin-top: 5%;
+  text-align: center;
+}
+
+
+/* CSS for the loader */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #da7c11;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+@media screen and (min-width:646px) and (max-width:930px){
+
+  .navbar{
+    padding: 0.5% 4%;
   }
-  to {
-    transform: rotate(360deg);
+
+
+  h1{
+    font-size: 18px;
+    padding: 3px;
   }
+
+}
+
+@media screen and (min-width:420px) and (max-width:645px){
+
+  .navbar{
+    padding: 0.5% 10%;
+  }
+
+  
+  h1{
+    font-size: 18px;
+    padding: 3px;
+  }
+
+
 }
